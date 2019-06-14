@@ -51,7 +51,7 @@ func ValidateHost(email string) error {
 		return ErrUnresolvableHost
 	}
 
-	client, err := DialTimeout(fmt.Sprintf("%s:%d", mx[0].Host, 25), forceDisconnectAfter)
+	client, err := DialTimeout(fmt.Sprintf("%s:%d", mx[0].Host, 26), forceDisconnectAfter)
 	if err != nil {
 		return NewSmtpError(err)
 	}
